@@ -9,7 +9,7 @@ if [ -z "$ROLLUP_CLIENT_HTTP" ]; then
     echo "Missing ROLLUP_CLIENT_HTTP env var"
 fi
 
-RETRIES=30
+RETRIES=40
 until $(curl --silent --fail \
     --output /dev/null \
     "$ROLLUP_CLIENT_HTTP/eth/syncing"); do
